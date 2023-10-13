@@ -1,38 +1,109 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+
+function maxOfTwoNumbers(n1,n2) {
+  if(n1>n2){
+    return n1;
+  }
+  else{
+    return n2;
+  }
+  }
+maxOfTwoNumers(1,2)
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  if (words.length === 0) {
+    return null;
+  }
 
+  let longestWord = words[0];
 
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+
+  return longestWord;
+}
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+  let sumNumbers = 0;
+
+  for(let i=0; i<numbers.length;i++){
+    sumNumbers += numbers[i]
+  }
+  return sumNumbers
+}
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arr) {
+  let total = 0;
 
+  for (let i of arr) {
+    if (typeof i === 'number') {
+      total += i;
+    } else if (typeof i === 'string') {
+      total += i.length;
+    } else if (typeof i === 'boolean') {
+      total += i ? 1 : 0;
+    } else {
+      throw new Error("Invalid array content. Only numbers, strings, and booleans are allowed.");
+    }
+  }
 
+  return total;
+}
+
+// should return: 57
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersAvg) {
+  let sumOfNum = 0
 
+  if(numbersAvg.length === 0) {
+    return null
+  }
+  else {
+    for(let i=0; i<numbersAvg.length;i++){
+      sumOfNum += numbersAvg[i]
+      }
+    return sumOfNum/numbersAvg.length
+  }
+}
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(avgnum) {
+  if (avgnum.length === 0) {
+    return 0; 
+  }
+
+  let totalLength = 0;
+
+  for (let avgnum of words) {
+    totalLength += avgnum.length;
+  }
+
+  return totalLength / avgnum.length;
+}
+
+const avgnum = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+const averageLength = averageWordLength(words);
+console.log("The average word length is:", averageLength);
 
 // Bonus - Iteration #4.1
 function avg() {}
