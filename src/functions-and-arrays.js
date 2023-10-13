@@ -88,18 +88,13 @@ function averageNumbers(numbersAvg) {
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(avgnum) {
-  if (avgnum.length === 0) {
-    return 0; 
-  }
-
-  let totalLength = 0;
-
-  for (let avgnum of words) {
-    totalLength += avgnum.length;
-  }
-
-  return totalLength / avgnum.length;
-}
+  i
+  Iteration #4.2: Array of strings
+  Implement the function named averageWordLength that receives as a single argument an array of words and returns the average length of the words:
+  
+  You can use the following array to test your solution:
+  
+  
 
 const avgnum = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 const averageLength = averageWordLength(words);
